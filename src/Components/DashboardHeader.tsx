@@ -2,7 +2,7 @@ import { ArrowLeft, User } from 'lucide-react';
 
 export default function DashboardHeader() {
   return (
-    <nav className="w-full px-4 py-3 flex justify-between items-center bg-gradient-to-r from-pink-200 to-purple-200 lg:bg-white lg:shadow-sm">
+    <nav className="w-full px-4 py-3 flex justify-between items-center backdrop-blur-2xl lg:bg-white lg:shadow-sm">
       <div className="flex items-center gap-3 lg:hidden">
         <ArrowLeft className="w-5 h-5 text-gray-700" />
         <span className="text-lg font-semibold text-gray-800">Dashboard</span>
