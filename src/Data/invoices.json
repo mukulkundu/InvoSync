@@ -1,0 +1,23 @@
+{
+  "totalEarnings": 125000,
+  "paymentAwaited": 25000,
+  "paymentOverdue": 25000,
+  "incomeTrend": [
+    { "month": "Jan", "income": 2000, "momGrowth": 20 },
+    { "month": "Feb", "income": 4000, "momGrowth": 50 },
+    { "month": "Mar", "income": 6000, "momGrowth": 80 },
+    { "month": "Apr", "income": 3000, "momGrowth": -20 },
+    { "month": "May", "income": 5000, "momGrowth": 60 },
+    { "month": "Jun", "income": 2500, "momGrowth": -50 }
+  ],
+  "invoices": [
+    { "client": "Client Name", "amount": 125000, "due": "2024-06-15", "status": "Unpaid" },
+    { "client": "Client Name", "amount": 125000, "due": "2024-06-15", "status": "Disputed" },
+    { "client": "Client Name", "amount": 125000, "due": "2024-06-15", "status": "Paid" },
+    { "client": "Client Name", "amount": 125000, "due": "2024-06-15", "status": "Partially Paid" },
+    { "client": "Client Name", "amount": 125000, "due": "2024-06-15", "status": "Overdue" },
+    { "client": "Client Name", "amount": 125000, "due": "2024-06-15", "status": "Awaited" },
+    { "client": "Client Name", "amount": 125000, "due": "2024-06-15", "status": "Draft" },
+    { "client": "Client Name", "amount": 125000, "due": "2024-06-15", "status": "Paid" }
+  ]
+}
