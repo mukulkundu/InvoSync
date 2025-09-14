@@ -1,3 +1,5 @@
+import { Pencil, Bell, ChevronDown } from "lucide-react";
+
 export type Invoice = {
   client: string;
   amount: number;
@@ -19,8 +21,13 @@ export default function InvoiceCard({ invoice, index }: InvoiceCardProps) {
     Overdue: "bg-red-100 text-red-600",
     Awaited: "bg-orange-100 text-orange-600",
     Draft: "bg-gray-100 text-gray-500",
-    "Update Status": "bg-purple-100 text-purple-600",
+    "Update Status": "bg-purple-500 text-white",
   };
+
+  const showDropdown = index === 0 && invoice.status === "Update Status";
+  const showEditIcon = invoice.status === "Draft";
+  const showBellIcon =
+    invoice.status === "Overdue" || invoice.status === "Awaited";
 
   return (
     <div className="flex justify-between items-center p-4 bg-white rounded-2xl border-3 border-gray-100 mb-3 mx-4 lg:mx-0">
@@ -32,18 +39,21 @@ export default function InvoiceCard({ invoice, index }: InvoiceCardProps) {
         </p>
       </div>
 
-      {/* Right side (Status + dot) */}
+      {/* Right side (Status + optional icon or dropdown) */}
       <div className="flex items-center gap-2">
+        {/* Status label */}
         <span
-          className={`px-3 py-1 rounded-full text-xs font-medium ${
+          className={`px-3 py-2 rounded-full text-xs font-medium flex items-center gap-1 ${
             statusColors[invoice.status] || statusColors.Draft
           }`}
         >
           {invoice.status}
+          {showDropdown && <ChevronDown size={14} />}
         </span>
-        {typeof index === "number" && index < 2 && (
-          <div className="w-1 h-1 bg-gray-300 rounded-full"></div>
-        )}
+
+        {/* Optional icons */}
+        {showEditIcon && <Pencil size={16} className="text-gray-400" />}
+        {showBellIcon && <Bell size={16} className="text-gray-400" />}
       </div>
     </div>
   );

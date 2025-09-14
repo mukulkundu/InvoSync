@@ -12,24 +12,24 @@ export default function CreativeInvoiceBox() {
                     }}
                 >
                     {/* inner white circle */}
-                    <div
-                        className="relative w-14 h-14 rounded-full flex items-center justify-center overflow-hidden bg-gray-100"
-                    >
-                        {/* plus sign with gradient fill */}
-                        <span
-                            className="text-5xl font-extrabold leading-none"
-                            style={{
-                                background:
-                                    "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 50%, #6366f1 100%)",
-                                WebkitBackgroundClip: "text",
-                                WebkitTextFillColor: "transparent",
-                                /* small drop to center it visually */
-                                transform: "translateY(-5px)",
-                            }}
-                        >
-                            +
-                        </span>
-                    </div>
+                    <div className="relative w-14 h-14 rounded-full flex items-center justify-center overflow-hidden bg-gray-100">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="w-8 h-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="#6366f1"  // 💡 Use solid color here
+        strokeWidth={4}
+    >
+        <path
+            strokeLinecap="butt"
+            strokeLinejoin="round"
+            d="M12 2v20m10-10H2"
+        />
+    </svg>
+</div>
+
+
                 </button>
                 {/* <h2 className="font-bold text-2xl text-gradient-to-r from-fuchsia-500 to-indigo-500 mb-2 bg-clip-text text-transparent">Create New Invoice</h2> */}
                 <h2 className="font-bold mt-4 text-3xl bg-gradient-to-r from-fuchsia-500 to-indigo-500 bg-clip-text text-transparent mb-2">

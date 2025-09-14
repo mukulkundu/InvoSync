@@ -5,6 +5,7 @@ import IncomeTrendChart from '../Components/IncomeTrendChart';
 import InvoiceCard from '../Components/InvoiceCard';
 import DashboardHeader from '../Components/DashboardHeader';
 import StatsGrid from '../Components/StatsGrid';
+import { PawPrint } from 'lucide-react';
 
 
 
@@ -49,7 +50,7 @@ export default function Dashboard() {
               <IncomeTrendChart data={data.incomeTrend} />
             </div>
             <div className="xl:col-span-1">
-  <div className="bg-white rounded-2xl border-3 border-gray-100 p-4 h-fit">
+  <div className="bg-white rounded-2xl border-3 border-gray-100 p-4 h-svh overflow-y-auto">
     <h2 className="font-semibold text-lg text-gray-800 mb-4">Your Invoices</h2>
     <div className="space-y-3">
       {data.invoices.map((inv, i) => (
@@ -61,6 +62,19 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
+      {/* Footer Section */}
+<div className="w-full flex justify-center px-4 pb-16 pt-10 bg-white">
+  <div className="px-6 py-4 text-center rounded-md w-full max-w-sm">
+    <h2 className="text-xl font-semibold text-gray-800">
+      <span className="text-gray-500 font-bold">Spark</span>
+      <PawPrint className="inline w-4 h-4 text-purple-500 mx-1" />
+
+      <span className="text-gray-400">nomy</span>
+    </h2>
+    <p className="text-sm text-gray-400">sparking the creator economy</p>
+  </div>
+</div>
+
     </div>
   );
 }
